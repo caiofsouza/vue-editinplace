@@ -1,7 +1,6 @@
 # VueEditInPlace
 
-[![npm](https://img.shields.io/npm/v/vue-backtotop.svg)](https://www.npmjs.com/package/vue-backtotop)
-
+[![npm](https://img.shields.io/npm/v/vue-editinplace.svg)](https://www.npmjs.com/package/vue-editinplace)
 A edit-in-place directive to edit texts and update instance model
 
 
