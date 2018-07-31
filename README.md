@@ -1,13 +1,15 @@
 # VueEditInPlace
 
-A edit-in-place directive which edit texts keeping all layouts of the target
+[![npm](https://img.shields.io/npm/v/vue-backtotop.svg)](https://www.npmjs.com/package/vue-backtotop)
+
+A edit-in-place directive to edit texts and update instance model
 
 
-# How to install
+# Installation
 
 Run `npm install vue-editinplace --save`
 
-Install in your Vue instance
+Import into your Vue instance
 ```js
 import Vue from 'vue'
 import VueEditInPlace from 'vue-editinplace'
@@ -81,7 +83,6 @@ Editing a value inside a loop
           {{ fruit }}
       </li>
     </ul>
-
     <!-- an array of objects -->
     <div v-for="(user, index) in users" :key="user.email">
       <h4 v-editinplace @edit="editObject($event, index, 'name')">
