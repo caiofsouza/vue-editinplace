@@ -96,8 +96,10 @@ const EditInPlace = {
         Vue.set(this.vnode.context, this.binding.expression, finalValue)
       }
     } else {
-      this.el.style.display = 'initial'
+      this.el.style.display = ''
     }
+
+    this.el.innerHTML = finalValue
 
     const eventDetail = {
       detail: {
@@ -111,6 +113,7 @@ const EditInPlace = {
     } else {
       this.vnode.elm.dispatchEvent(new CustomEvent('edit', eventDetail))
     }
+    this.vnode.context.$forceUpdate()
   },
   reverseChanges() {
     this.input.value = this.initialText

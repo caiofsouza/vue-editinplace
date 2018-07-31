@@ -73,24 +73,24 @@ Editing a value inside a loop
   <div>
     <!-- an array of strings -->
     <ul>
-      <li v-for="(fruit, index) in fruits" v-key="fruit">
-        <span v-editinplace @edit="editList($event, index)">
+      <li 
+        v-for="(fruit, index) in fruits" 
+        :key="fruit"
+        v-editinplace
+        @edit="editList($event, index)">
           {{ fruit }}
-        </span>
       </li>
     </ul>
 
     <!-- an array of objects -->
-    <ul>
-      <li v-for="(user, index) in users" v-key="user.email">
-        <h4 v-editinplace @edit="editObject($event, index, 'name')">
-          {{ user.name }}
-        </h4>
-        <h4 v-editinplace @edit="editObject($event, index, 'name')">
-          {{ user.email }}
-        </h4>
-      </li>
-    </ul>
+    <div v-for="(user, index) in users" :key="user.email">
+      <h4 v-editinplace @edit="editObject($event, index, 'name')">
+        {{ user.name }}
+      </h4>
+      <h4 v-editinplace @edit="editObject($event, index, 'email')">
+        {{ user.email }}
+      </h4>
+    </div>
   </div>
 </template>
 <script>
