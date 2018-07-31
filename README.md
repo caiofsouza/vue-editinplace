@@ -30,9 +30,9 @@ Editing a data variable from an instance
   export default {
     data () {
       return {
-        title: 'Hello World!',
+        title: 'Hello World!'
       }
-    },
+    }
   }
 </script>
 ```
@@ -52,15 +52,15 @@ Get the modified value
       return {
         title: 'Hello World!',
         newValue: '',
-        oldValue: '',
+        oldValue: ''
       }
     },
     methods: {
       edit (event) {
         this.newValue = event.detail.newValue
         this.oldValue = event.detail.oldValue
-      },
-    },
+      }
+    }
   }
 </script>
 ```
@@ -101,15 +101,15 @@ Editing a value inside a loop
         users: [
           {
             name: 'Jorge',
-            email: 'jorge@email.com',
+            email: 'jorge@email.com'
           },
           {
             name: 'Caio',
-            email: 'caio@email.com',
+            email: 'caio@email.com'
           },
           {
             name: 'Bruno',
-            email: 'bruno@email.com',
+            email: 'bruno@email.com'
           },
         ]
       }
@@ -121,7 +121,7 @@ Editing a value inside a loop
       editObject (event, index, attr) {
         this.users[index][attr] = event.detail.newValue
       }
-    },
+    }
   }
 </script>
 ```
