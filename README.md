@@ -5,8 +5,9 @@ A edit-in-place directive which edit texts keeping all layouts of the target
 
 # How to install
 
-`npm install vue-editinplace --save`
+Run `npm install vue-editinplace --save`
 
+Install in your Vue instance
 ```js
 import Vue from 'vue'
 import VueEditInPlace from 'vue-editinplace'
@@ -20,7 +21,7 @@ Vue.use(VueEditInPlace)
 VueEditInPlace exposes a directive called `v-editinplace`, and a custom event `@edit`, which contains an object with the old value and the new value
 Examples:
 
-Editing a data variable from a instance
+Editing a data variable from an instance
 ```html
 <template>
   <h2 v-editinplace="title">{{ title }}</h2>
@@ -118,7 +119,7 @@ Editing a value inside a loop
         this.fruits[index] = event.detail.newValue
       },
       editObject (event, index, attr) {
-        this.users[index][attr] = event.newValue
+        this.users[index][attr] = event.detail.newValue
       }
     },
   }
